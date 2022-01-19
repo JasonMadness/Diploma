@@ -168,6 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 5
   _reward: 75
+  _particlesOffset: {x: 0, y: 1, z: 0}
 --- !u!114 &659128682370153994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d5d394e92ac3c4586d229feff9a2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bullet: {fileID: 6602982246200592357, guid: 6ae2428ff365615439febbec90b54625, type: 3}
+  _bulletPool: {fileID: 0}
   _shootPoints:
   - {fileID: 2084209922727850326}
-  _shootDelay: 2.5
+  _player: {fileID: 0}
+  _shootInterval: 2.5
+  _shootDelay: 0.5

@@ -386,7 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 65485177}
   _capacity: 3
-  _enemyPrefab: {fileID: 3680067087237372698, guid: 5b8a3e700d48ea24faf8bdfde9b91626, type: 3}
+  _enemyPrefab: {fileID: 3680067087237372688, guid: 5b8a3e700d48ea24faf8bdfde9b91626, type: 3}
 --- !u!1 &173675725
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 970056806}
   _capacity: 20
-  _bulletPrefab: {fileID: 6602982246200592357, guid: 6ae2428ff365615439febbec90b54625, type: 3}
+  _bulletPrefab: {fileID: -2505555650243218974, guid: 6ae2428ff365615439febbec90b54625, type: 3}
 --- !u!1 &999370600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2051,7 +2051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 1094863653}
   _capacity: 3
-  _deathParticlesPrefab: {fileID: 445175440630954905, guid: a4d808070a857d4409e36ad6822d22fb, type: 3}
+  _deathParticlesPrefab: {fileID: 3620662476935257808, guid: a4d808070a857d4409e36ad6822d22fb, type: 3}
 --- !u!1 &1105508276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.407, y: 0.4098148}
   m_AnchorMax: {x: 0.59252083, y: 0.46800002}
-  m_AnchoredPosition: {x: 0.5, y: -0.040000916}
+  m_AnchoredPosition: {x: 0.5, y: -0.040008545}
   m_SizeDelta: {x: 2.9201965, y: 1.6528015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118806030
@@ -2720,7 +2720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 1516912531}
   _capacity: 3
-  _enemyPrefab: {fileID: 5507117646668466856, guid: f792453d4b47fd2459c53a20e70a3085, type: 3}
+  _enemyPrefab: {fileID: 9125302193397437067, guid: f792453d4b47fd2459c53a20e70a3085, type: 3}
 --- !u!1 &1552247877
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 1667520510}
   _capacity: 20
-  _bulletPrefab: {fileID: 5456945854590086494, guid: c60efa97a678d1b4aad392de58932679, type: 3}
+  _bulletPrefab: {fileID: -7561089529349526750, guid: c60efa97a678d1b4aad392de58932679, type: 3}
 --- !u!1 &1734174291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _container: {fileID: 1935667282}
   _capacity: 3
-  _enemyPrefab: {fileID: 4727265515204485155, guid: 2810180a24d3c984aa79bc5641828bd6, type: 3}
+  _enemyPrefab: {fileID: 8310334685281400832, guid: 2810180a24d3c984aa79bc5641828bd6, type: 3}
 --- !u!1 &1938505470
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,8 +25,9 @@ public class PlayerShooting : MonoBehaviour
     {
         _isGrounded = Mathf.Abs(_rigidbody.velocity.y) < 0.01f;
 
-        if (_isGrounded && _bulletPool.TryGetObject(out GameObject bullet))
+        if (_isGrounded)
         {
+            GameObject bullet = _bulletPool.GetObject();
             _audio.PlayPlayerShotSound();
             bullet.SetActive(true);
             bullet.transform.position = _shootPoint.position;

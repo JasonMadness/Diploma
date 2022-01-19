@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health;
     [SerializeField] private int _reward;
+    [SerializeField] private Vector3 _particlesOffset;
 
     private Player _player;
     private Audio _audio;
@@ -46,13 +47,10 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        if (_deathParticlesPool.TryGetObject(out GameObject deathParticles))
-        {
-            deathParticles.SetActive(true);
-            deathParticles.transform.position = transform.position;
-        }
-
-        EnemyDied?.Invoke(_reward); 
+        GameObject deathParticles = _deathParticlesPool.GetObject();
+        deathParticles.SetActive(true);
+        deathParticles.transform.position = transform.position + _particlesOffset;
+        EnemyDied?.Invoke(_reward);
         EnemyDied -= _player.OnEnemyDied;
         gameObject.SetActive(false);
     }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DeathParticlesPool : ObjectPool
 {
-    [SerializeField] private GameObject _deathParticlesPrefab;
+    [SerializeField] private ParticleSystem _deathParticlesPrefab;
 
     private void Start()
     {
-        Initialize(_deathParticlesPrefab);
+        Initialize(_deathParticlesPrefab.gameObject);
     }
 }

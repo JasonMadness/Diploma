@@ -8,11 +8,13 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private ObjectPool _bulletPool;
     [SerializeField] private Transform[] _shootPoints;
     [SerializeField] private Player _player;
-    [SerializeField] private float _shootDelay;
+    [SerializeField] private float _shootInterval;
+    [SerializeField] private float _shootDelay = 0.5f;
 
     private Animator _animator;
     private float _waitingTime;
-    private float _shootAnimationLength = 1f;
+
+    public const string Shoot = "Shoot";
 
     private void Awake()
     {
@@ -21,7 +23,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void Start()
     {
-        _waitingTime = _shootDelay;
+        _waitingTime = _shootInterval;
     }
 
     public void Init(Player player, BulletPool bulletPool)
@@ -30,14 +32,14 @@ public class EnemyShooting : MonoBehaviour
         _player = player;
     }
 
-    private IEnumerator Shoot()
+    private IEnumerator MakeShot()
     {
-        _animator.SetTrigger("Shoot");
-        yield return new WaitForSeconds(_shootAnimationLength / 2);
+        _animator.SetTrigger(Shoot);
+        yield return new WaitForSeconds(_shootDelay);
 
         foreach (Transform shootPoint in _shootPoints)
         {
-            _bulletPool.TryGetObject(out GameObject bullet);
+            GameObject bullet = _bulletPool.GetObject();
             bullet.SetActive(true);
             bullet.transform.position = shootPoint.position;
         }
@@ -51,8 +53,8 @@ public class EnemyShooting : MonoBehaviour
 
             if (_waitingTime < 0)
             {
-                StartCoroutine(Shoot());
-                _waitingTime = _shootDelay;
+                StartCoroutine(MakeShot());
+                _waitingTime = _shootInterval;
             }
         }
     }

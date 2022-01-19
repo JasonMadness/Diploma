@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BulletPool : ObjectPool
 {
-    [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private Bullet _bulletPrefab;
 
     private void Start()
     {
-        Initialize(_bulletPrefab);
+        Initialize(_bulletPrefab.gameObject);
     }
 }

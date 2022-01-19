@@ -23,13 +23,10 @@ public class EnemySpawner : MonoBehaviour
         if (_player.IsAlive == true)
         {
             int randomIndex = Random.Range(0, _enemyPools.Length);
-
-            if (_enemyPools[randomIndex].TryGetObject(out GameObject enemy))
-            {
-                enemy.SetActive(true);
-                enemy.transform.position = transform.position;
-                enemy.GetComponent<Enemy>().Init(_player, _audio, _deathParticlesPool, _bulletPool);
-            }
+            GameObject enemy = _enemyPools[randomIndex].GetObject();
+            enemy.SetActive(true);
+            enemy.transform.position = transform.position;
+            enemy.GetComponent<Enemy>().Init(_player, _audio, _deathParticlesPool, _bulletPool);
         }
     }
 

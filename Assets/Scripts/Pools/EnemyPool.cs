@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EnemyPool : ObjectPool
 {
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private Enemy _enemyPrefab;
 
     private void Start()
     {
-        Initialize(_enemyPrefab);
+        Initialize(_enemyPrefab.gameObject);
     }
 }
